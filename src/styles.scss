@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  background-color: #000000;
+  color: #fff;
+}
+
+
+html, body {
+  overflow-x: hidden; /* Remove a rolagem horizontal */
+  scroll-behavior: smooth; /* Suaviza o scroll */
+}
+
+span {
+  color: #D92D20;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; /* Torna o trilho invisível */
+}
+
+/* Personaliza o polegar do scrollbar (a barra de rolagem visível) */
+::-webkit-scrollbar-thumb {
+  background: #D92D20;
+}
+
+/* Define o tamanho do scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Largura do scrollbar vertical */
+}
+
+ul {
+  list-style: none;
+}
