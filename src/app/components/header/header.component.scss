@@ -42,4 +42,103 @@
   .menu li a:hover {
       color: #D92D20;
   }
+
+  .abrir-menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
+
+.abrir-menu .abrir-icon {
+    color: #ff4747;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 55px 0;
+    font-weight: 600;
+}
+
+/*menu mobile*/
+.menu-mobile {
+    background: #000000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+
+.btn-fechar {
+    padding: 20px 5%;
+}
+
+.btn-fechar .fechar-icon {
+    color: #ff4747;
+    font-size: 40px;
+}
+
+.menu-mobile .div-ul ul li a {
+    color: #ff4747;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 30px 8%;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-mobile .div-ul ul li a:hover {
+    background: #ff4747;
+    color: #1a1a1a;
+}
+
+.menu-mobile .div-ul ul {
+    text-align: right;
+}
+
+.overlay-menu {
+    background-color: #ffffffab;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+}
+
+
+@media screen and (min-width: 1025px) {
+  .app-header {
+    .abrir-menu, .logo-mobile {
+      display: none;
+  }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .app-header {
+    .abrir-menu, .logo-mobile {
+      display: block;
+      padding: 20px 4%;
+  }
+
+  .menu, .logo {
+      display: none;
+  }
+  }
+}
+
