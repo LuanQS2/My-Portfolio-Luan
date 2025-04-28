@@ -217,8 +217,9 @@ main {
     .languages-mobile {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       gap: 50px;
+
     }
   }
 
@@ -305,6 +306,19 @@ main {
         margin-top: 140px;
       }
     }
+
+    .projects {
+      background: none;
+      height: auto; /* Deixa a altura se ajustar ao conteúdo */
+      padding-bottom: 50px; /* Adiciona um espaçamento antes do footer */
+
+
+      .carousel{
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
   }
 }
 
@@ -322,11 +336,6 @@ main {
       }
 
       .projects {
-        background: none;
-        height: auto; /* Deixa a altura se ajustar ao conteúdo */
-        padding-bottom: 50px; /* Adiciona um espaçamento antes do footer */
-
-
         .carousel{
           display: flex;
           flex-direction: column;
