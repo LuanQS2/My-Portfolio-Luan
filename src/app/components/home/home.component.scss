@@ -298,6 +298,16 @@ main {
 }
 
 
+@media (max-width: 1280px) {
+  main {
+    .hero {
+      h3 {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1024px) {
     main{
       .about {
