@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 55px 0;
+    padding: 55px 8%;
     transition: background 0.3s ease-in-out;
   }
 
@@ -47,7 +47,7 @@
     position: absolute;
     top: 10px;
     right: 20px;
-}
+  }
 
 .abrir-menu .abrir-icon {
     color: #ff4747;
@@ -121,6 +121,7 @@
 }
 
 
+
 @media screen and (min-width: 1025px) {
   .app-header {
     .abrir-menu, .logo-mobile {
@@ -131,14 +132,19 @@
 
 @media screen and (max-width: 1024px) {
   .app-header {
-    .abrir-menu, .logo-mobile {
-      display: block;
-      padding: 20px 4%;
-  }
+    #navbar{
+      display: flex;
+      justify-content: space-between;
+    }
 
-  .menu, .logo {
-      display: none;
-  }
+    .abrir-menu, .logo-mobile {
+        display: block;
+        padding: 20px 4%;
+    }
+
+    .menu, .logo {
+        display: none;
+    }
   }
 }
 
