@@ -88,25 +88,37 @@
       <h2>Meus <span>projetos</span></h2>
       <p>Confira alguns dos trabalhos que desenvolvi! </p>
     </div>
+
     <div class="box-container">
       <div class="carousel">
-        <div class="card">
+
+        <a [routerLink]="['/em-construcao']">
+          <div class="card">
             <div class="title">Front-end</div>
-            <hr>
-            <img src="/assets/img/img-front.png" alt="Front-end">
-        </div>
-        <div class="card">
+            <hr />
+            <img src="/assets/img/img-front.png" alt="Front-end" />
+          </div>
+        </a>
+
+        <a [routerLink]="['/em-construcao']">
+          <div class="card">
             <div class="title">Back-end</div>
-            <hr>
-            <img src="/assets/img/img-back.png" alt="Back-end">
-        </div>
-        <div class="card">
+            <hr />
+            <img src="/assets/img/img-back.png" alt="Back-end" />
+          </div>
+        </a>
+
+        <a [routerLink]="['/em-construcao']">
+          <div class="card">
             <div class="title">Mobile</div>
-            <hr>
-            <img src="/assets/img/img-mobile.png" alt="Mobile">
-        </div>
+            <hr />
+            <img src="/assets/img/img-mobile.png" alt="Mobile" />
+          </div>
+        </a>
+
+      </div>
     </div>
-    </div>
+
   </div>
 </section>
 <app-footer></app-footer>
