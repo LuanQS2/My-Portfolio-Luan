@@ -346,7 +346,8 @@ main {
 }
 
 @media (max-width: 853px) {
-  .languages-i-now {
+  main {
+    .languages-i-now {
     display: none !important;
   }
 
@@ -356,6 +357,23 @@ main {
     h2 {
       text-align: center;
     }
+  }
+
+   .hero {
+    height: calc(100vh - 300px);
+  }
+
+  .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 75%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)70%, #000000);
+      pointer-events: none;
+      z-index: 1;
+  }
   }
 }
 
@@ -372,11 +390,25 @@ main {
 @media (max-width: 430px) {
   main {
     .hero {
+      height: calc(100vh - 350px);
+
       .button-hero {
         flex-direction: column;
         border: none;
 
       }
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)80%, #000000);
+      pointer-events: none;
+      z-index: 1;
     }
 
     .about {
@@ -406,11 +438,36 @@ main {
       .primary-container {
         margin-top: 80px;
       }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      .button-hero {
+        margin-top: 50px;
+
+        a {
+          font-size: 16px;
+        }
+
+        .btn-contato,
+        .btn-download {
+          width: 150px;
+        }
+      }
     }
 
     .about {
       .primary-container {
-        margin: 15px ;
+        margin: 100px ;
 
 
         .about-text {
