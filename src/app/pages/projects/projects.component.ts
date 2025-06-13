@@ -14,6 +14,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+  ngOnInit(): void {
+    window.scrollTo(0, 0); 
+  }
+
 
   ngAfterViewInit(): void {
     this.setupFilterButtons();
