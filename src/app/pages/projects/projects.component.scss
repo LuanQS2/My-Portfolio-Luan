@@ -1,13 +1,14 @@
 main {
   .hero-projects {
-    background: url('/assets/img/img-hero.png') center/cover no-repeat;
-    height: calc(85vh - 70px); /* Ajuste conforme a altura do navbar */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 70%, #000000), url('/assets/img/img-hero.png') center/cover no-repeat;
+    height: calc(85vh - 70px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
     text-align: center;
+
 
     .container {
       display: flex;
@@ -49,18 +50,6 @@ main {
 
     }
 
-  }
-
-  .hero-projects::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 78%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)70%, #000000);
-    pointer-events: none;
-    z-index: 1;
   }
 
   .projects-section {
