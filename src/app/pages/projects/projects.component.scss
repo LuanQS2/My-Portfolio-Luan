@@ -64,8 +64,11 @@ main {
   }
 
   .projects-section {
-    padding: 80px 8%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -280,4 +283,13 @@ main {
   margin-bottom: 10px;
 }
 
-
+@media screen and (max-width: 768px) {
+  main{
+    .projects-section {
+    .projects-grid {
+    grid-template-columns: 1fr; // Sobrescreve a regra anterior para uma única coluna
+    gap: 20px;
+    }
+  }
+  }
+}
