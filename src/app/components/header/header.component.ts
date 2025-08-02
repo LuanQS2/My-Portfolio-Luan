@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -11,23 +12,17 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  ngOnInit() {
-    const btnMenu = document.getElementById('btn-menu');
-    const menu = document.getElementById('menu-mobile');
-    const overlay = document.getElementById('overlay-menu');
+  isMenuOpen = false; // Propriedade para controlar o estado do menu
 
-    if (btnMenu && menu && overlay) {
-      btnMenu.addEventListener('click', () => {
-        menu.classList.add('abrir-menu');
-      });
+  constructor(private scroller: ViewportScroller) {}
 
-      menu.addEventListener('click', () => {
-        menu.classList.remove('abrir-menu');
-      });
+  // Método para abrir/fechar o menu
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
-      overlay.addEventListener('click', () => {
-        menu.classList.remove('abrir-menu');
-      });
-    }
+   scrollToAnchor(fragment: string) {
+    this.scroller.scrollToAnchor(fragment);
+    this.isMenuOpen = false; // Feche o menu após clicar no link
   }
 }
