@@ -52,16 +52,16 @@ main {
   }
 
   .hero-projects::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 78%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.9) 90%, #000000);
-  pointer-events: none;
-  z-index: 1;
-}
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 78%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1)70%, #000000);
+    pointer-events: none;
+    z-index: 1;
+  }
 
   .projects-section {
     display: flex;
@@ -285,9 +285,13 @@ main {
 
 @media screen and (max-width: 768px) {
   main{
+      .hero-projects::after {
+        height: 80%;
+     }
+
     .projects-section {
     .projects-grid {
-    grid-template-columns: 1fr; // Sobrescreve a regra anterior para uma única coluna
+    grid-template-columns: 1fr;
     gap: 20px;
     }
   }
