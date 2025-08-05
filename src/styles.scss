@@ -19,9 +19,6 @@ html, body {
   scroll-behavior: smooth; /* Suaviza o scroll */
 }
 
-span {
-  color: #D92D20;
-}
 
 a {
   text-decoration: none;
@@ -43,4 +40,39 @@ a {
 
 ul {
   list-style: none;
+}
+
+.animated-title {
+      color: #FFF;
+      font-size: 38px;
+      font-weight: 500;
+
+      /* Cria o degradê (a "onda") */
+      background: linear-gradient(
+        90deg,
+        #FFF,
+        #D92D20,
+        #FFF,
+        #D92D20,
+        #FFF
+      );
+
+      /* Faz o fundo ser o dobro do tamanho do texto para a animação */
+      background-size: 200% 100%;
+
+      /* Prende o fundo ao texto e torna o texto transparente */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      /* Aplica a animação da "onda" de cor */
+      animation: color-flow 4s linear infinite;
+
+      @keyframes color-flow {
+          0% {
+            background-position: 100% 0;
+          }
+          100% {
+            background-position: -100% 0;
+          }
+      }
 }
